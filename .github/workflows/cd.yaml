@@ -18,4 +18,9 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: 22
-          script: whoami
+          script: |
+            cd /home/syn/apps/node1
+            git pull origin main
+            git status
+            npm install --only=prod
+            pm2 restart node1
