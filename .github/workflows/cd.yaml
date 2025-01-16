@@ -23,4 +23,5 @@ jobs:
             git pull origin main
             git status
             npm install --omit=dev
-            pm2 restart todo
+            echo test
+            pm2 restart todo --update-env
