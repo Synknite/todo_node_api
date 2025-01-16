@@ -19,8 +19,8 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: 22
           script: |
-            cd /home/syn/apps/node1
+            cd /home/syn/apps/todo_node_api
             git pull origin main
             git status
-            npm install --only=prod
+            npm install --only=prod --omit=dev
             pm2 restart todo
