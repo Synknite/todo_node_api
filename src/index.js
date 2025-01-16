@@ -48,6 +48,6 @@ app.get("/", (req, res) => {
   res.json({ message: "Server active." });
 });
 
-app.listen(process.env.APP_PORT, () => {
+app.listen(process.env.APP_PORT, '0.0.0.0', () => {
   console.log(`Example app listening on port ${process.env.APP_PORT}`);
 });
