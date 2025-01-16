@@ -22,5 +22,5 @@ jobs:
             cd /home/syn/apps/todo_node_api
             git pull origin main
             git status
-            npm install --only=prod --omit=dev
+            npm install --omit=dev
             pm2 restart todo
